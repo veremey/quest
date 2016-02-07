@@ -1,6 +1,7 @@
 $icons: (0:0)
-$icons: map-merge($icons,(codedby: (X: 0px, Y:-9px, W: 47px, H: 5px, TW: 49px, TH: 14px, IMG: '../img/icons.png')))
-$icons: map-merge($icons,(coderiver: (X: 0px, Y:0px, W: 49px, H: 5px, TW: 49px, TH: 14px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(corner-lt: (X: 0px, Y:-286px, W: 157px, H: 155px, TW: 864px, TH: 441px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(corner-rt: (X: -161px, Y:-286px, W: 157px, H: 155px, TW: 864px, TH: 441px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(icon-footer: (X: 0px, Y:0px, W: 864px, H: 282px, TW: 864px, TH: 441px, IMG: '../img/icons.png')))
 
 
 // Gets an attribute from the sass map
@@ -37,15 +38,21 @@ $icons: map-merge($icons,(coderiver: (X: 0px, Y:0px, W: 49px, H: 5px, TW: 49px, 
 	+sprite-retina($i)	
 
 //
-//.icon-codedby
-//	width: 47px
-//	height: 5px
+//.icon-corner-lt
+//	width: 157px
+//	height: 155px
 //	background-image: url('../img/icons.png')
-//	background-position: 0px -9px
+//	background-position: 0px -286px
 //
-//.icon-coderiver
-//	width: 49px
-//	height: 5px
+//.icon-corner-rt
+//	width: 157px
+//	height: 155px
+//	background-image: url('../img/icons.png')
+//	background-position: -161px -286px
+//
+//.icon-icon-footer
+//	width: 864px
+//	height: 282px
 //	background-image: url('../img/icons.png')
 //	background-position: 0px 0px
 //

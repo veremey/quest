@@ -1,36 +1,117 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-// 			+s(codedby) 
-// ## gradient example
-//     	+g(#232323, #5c5c5c);
-//	   horizontal
-//     	+gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +r(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts
-// Save fonts to /src/fonts
-// +font(book, cytiapro-black-webfont)
-// and create mixin
-// =book
-// 	font-family: "book", Arial, sans-serif
+//font
++font(PopularScript, PopularScript)
+=ps
+	font-family: 'PopularScript'
+
 
 body
 	font-family: Arial, sans-serif
 	font-size: 12px
-	line-height: 1.4
-	
+	line-height: 1.2
+	color: #393324
+
 // common blocks
+
+
+.out
+	position: relative
+	width: 1400px
+	margin: 0 auto
+	padding-top: 1px
+	+clr
+
+.bg
+	+coverdiv
+
+.main
+	width: 860px
+	height: 966px
+	position: relative
+	padding-top: 1px
+	margin: 25px auto 0
+	background-color: rgba(255, 255, 255, .8)
+	+clr
+	&:before
+		content: ""
+		position: absolute
+		top: -2px
+		left: -2px
+		width: 155px
+		height: 155px
+		background-image: url("../img/corner-lt.png")
+	&:after
+		content: ""
+		position: absolute
+		top: -2px
+		right: 0
+		width: 155px
+		height: 155px
+		background-image: url("../img/corner-rt.png")
+
+//cloud
+.cloud
+	width: 514px
+	height: 284px
+	text-align: center
+	margin: 35px auto 0
+	background-image: url("../img/cloud.svg")
+	&__text
+		p
+			font-size: 36px
+			margin-top: 10px
+.task
+	display: inline-block
+	font-size: 48px
+	margin: 40px auto 0
+	+ps
+
+//contant
+.contant
+	width: 92%
+	margin: 20px auto
+	+clr
+	p
+		font-size: 36px
+.rotate
+	+rotate(180)
+	direction: rtl
+	unicode-bidi: bidi-override
+//form
+.answer
+	margin-top: 10px
+	+clr
+	input
+		width: calc(770px - 210px)
+		float: left
+		background-color: #FFF
+		height: 70px
+		padding: 0 20px
+		font-size: 36px
+	&__btn
+		float: right
+		width: 190px
+		height: 58px
+		margin-top: 5px
+		border-radius: 22px
+		background-color: #cbb08f
+		border: 2px solid #000
+		-webkit-box-shadow: 0 0 0 6px #fff
+		box-shadow: 0 0 0 6px #fff
+		font-size: 40px
+		+ps
+
+// footer
+.footer
+	position: absolute
+	bottom: 0
+	width: 100%
+	left: 0
+	height: 282px
+	background-image: url("../img/footer.png")
+.attention
+	position: absolute
+	bottom: 50px
+	left: 50px
+	font-size: 40px
+	line-height: 1.2
+	+ps

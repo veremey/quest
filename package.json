@@ -1,11 +1,11 @@
 {
-  "name": "Coderiver-Project",
+  "name": "Veremey",
   "version": "0.2.0",
-  "description": "Riverco.de gulp template",
-  "author": "Coderiver <html@coderiver.com.ua>",
+  "description": "Veremey gulp template",
+  "author": "Veremey <veremey4uk@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/coderiver/gulp"
+    "url": "https://github.com/veremey/quest"
   },
   "devDependencies": {
     "autoprefixer": "~6.0.3",
