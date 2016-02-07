@@ -32,12 +32,14 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .icon-skrill:before { content: ""; }
 
 @font-face { font-family: PopularScript; src: url("fonts/PopularScript.eot"); src: url("fonts/PopularScript.eot?#iefix") format("embedded-opentype"), url("fonts/PopularScript.woff2") format("woff2"), url("fonts/PopularScript.woff") format("woff"), url("fonts/PopularScript.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.2; color: #393324; }
+body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.2; color: #393324; min-width: 870px; }
 
-.out { position: relative; width: 1400px; height: auto; margin: 0 auto; padding-top: 1px; *zoom: 1; }
+.out { position: relative; height: auto; margin: 0 auto; padding-top: 1px; *zoom: 1; }
 .out:after { content: " "; display: table; clear: both; }
 
 .bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.clear { display: table; clear: both; height: 0; }
 
 .main { width: 860px; height: 966px; position: relative; padding-top: 1px; margin: 25px auto 50px; background-color: rgba(255, 255, 255, 0.8); *zoom: 1; }
 .main:after { content: " "; display: table; clear: both; }
@@ -49,16 +51,46 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.2; color:
 
 .task { display: inline-block; font-size: 48px; margin: 40px auto 0; font-family: "PopularScript"; }
 
-.contant { width: 796px; margin: 20px auto; *zoom: 1; }
+.jumbatron { position: relative; top: 0; left: 0; width: 100%; overflow: hidden; display: block; height: 1040px; z-index: 1; }
+.jumbatron__img { position: absolute; width: 1400px; left: 50%; margin-left: -700px; text-align: center; height: 1040px; }
+.jumbatron__img img { height: 100%; width: auto; }
+
+.contant { position: relative; width: 796px; margin: 20px auto; text-align: center; *zoom: 1; }
 .contant:after { content: " "; display: table; clear: both; }
-.contant p { font-size: 36px; }
+.contant__left { float: left; width: 19%; }
+.contant__right { float: right; width: 77%; }
+.contant__right p { text-align: left !important; }
+.contant h2 { font-size: 40px; text-align: center; font-weight: 100; margin: 10px 0 20px; }
+.contant p { font-size: 30px; text-align: center; }
+.contant img { vertical-align: top; display: inline-block; margin: 15px auto; max-width: 100%; }
+
+.have__margin { margin: 30px 0; }
+
+.hint { margin: 25px 0; }
+
+.upper { text-transform: uppercase; font-size: 40px; text-align: center; }
+
+.vcenter { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); top: 43%; }
 
 .rotate { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); direction: rtl; unicode-bidi: bidi-override; }
 
-.answer { margin-top: 10px; *zoom: 1; }
+.answer { margin-top: 15px; *zoom: 1; }
 .answer:after { content: " "; display: table; clear: both; }
+.answer__buttons { *zoom: 1; }
+.answer__buttons:after { content: " "; display: table; clear: both; }
+.answer__yes, .answer__no { margin-top: 25px; -webkit-border-radius: 22px; border-radius: 22px; background-color: #cbb08f; border: 2px solid #000; -webkit-box-shadow: 0 0 0 6px #fff; box-shadow: 0 0 0 6px #fff; font-size: 40px; font-family: "PopularScript"; -webkit-transition: 0.3s; transition: 0.3s; }
+.answer__yes:hover, .answer__no:hover { background-color: #dbc9b2; }
+.answer__yes { width: 190px; float: left; margin-left: 25px; }
+.answer__no { width: 510px; float: right; margin-right: 25px; }
 .answer input { width: -webkit-calc(770px - 210px); width: calc(770px - 210px); float: left; background-color: #FFF; height: 70px; padding: 0 20px; font-size: 36px; }
-.answer__btn { float: right; width: 190px; height: 58px; margin-top: 5px; -webkit-border-radius: 22px; border-radius: 22px; background-color: #cbb08f; border: 2px solid #000; -webkit-box-shadow: 0 0 0 6px #fff; box-shadow: 0 0 0 6px #fff; font-size: 40px; font-family: "PopularScript"; }
+.answer__btn { float: right; width: 190px; height: 58px; margin-top: 5px; -webkit-border-radius: 22px; border-radius: 22px; background-color: #cbb08f; border: 2px solid #000; -webkit-box-shadow: 0 0 0 6px #fff; box-shadow: 0 0 0 6px #fff; font-size: 40px; font-family: "PopularScript"; -webkit-transition: 0.3s; transition: 0.3s; }
+.answer__btn:hover { background-color: #dbc9b2; }
+
+.btn__center { width: 180px; margin-top: 40px; height: 58px; -webkit-border-radius: 22px; border-radius: 22px; background-color: #cbb08f; border: 2px solid #000; -webkit-box-shadow: 0 0 0 6px #fff; box-shadow: 0 0 0 6px #fff; text-align: center; font-size: 40px; line-height: 58px; font-weight: 600; font-family: "PopularScript"; -webkit-transition: 0.3s; transition: 0.3s; }
+.btn__center:hover { background-color: #dbc9b2; }
+
+.footer__btn { position: absolute; bottom: 210px; right: 50px; width: 190px; height: 58px; -webkit-border-radius: 22px; border-radius: 22px; background-color: #cbb08f; border: 2px solid #000; -webkit-box-shadow: 0 0 0 6px #fff; box-shadow: 0 0 0 6px #fff; text-align: center; font-size: 40px; line-height: 58px; font-family: "PopularScript"; -webkit-transition: 0.3s; transition: 0.3s; }
+.footer__btn:hover { background-color: #dbc9b2; }
 
 .footer { position: absolute; bottom: 0; width: 100%; left: 0; height: 282px; background-image: url("../img/footer.png"); }
 

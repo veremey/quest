@@ -9,13 +9,14 @@ body
 	font-size: 12px
 	line-height: 1.2
 	color: #393324
+	min-width: 870px
 
 // common blocks
 
 
 .out
 	position: relative
-	width: 1400px
+	// width: 1400px
 	height: auto
 	margin: 0 auto
 	padding-top: 1px
@@ -23,7 +24,10 @@ body
 
 .bg
 	+coverdiv
-
+.clear
+	display: table
+	clear: both
+	height: 0
 .main
 	width: 860px
 	height: 966px
@@ -66,21 +70,97 @@ body
 	margin: 40px auto 0
 	+ps
 
+.jumbatron
+	position: relative
+	top: 0
+	left: 0
+	width: 100%
+	overflow: hidden
+	display: block
+	height: 1040px
+	z-index: 1
+	&__img
+		position: absolute
+		width: 1400px
+		left: 50%
+		margin-left: -700px
+		text-align: center
+		height: 1040px
+		img
+			height: 100%
+			width: auto
+
 //contant
 .contant
+	position: relative
 	width: 796px
 	margin: 20px auto
+	text-align: center
 	+clr
+	&__left
+		float: left
+		width: 19%
+	&__right
+		float: right
+		width: 77%
+		p
+			text-align: left !important
+	h2
+		font-size: 40px
+		text-align: center
+		font-weight: 100
+		margin: 10px 0 20px
 	p
-		font-size: 36px
+		font-size: 30px
+		text-align: center
+	img
+		vertical-align: top
+		display: inline-block
+		margin: 15px auto
+		max-width: 100%
+.have__margin
+	margin: 30px 0
+.hint
+	margin: 25px 0
+
+.upper
+	text-transform: uppercase
+	font-size: 40px
+	text-align: center
+.vcenter
+	+vcenter
+	top: 43%
 .rotate
 	+rotate(180)
 	direction: rtl
 	unicode-bidi: bidi-override
 //form
 .answer
-	margin-top: 10px
+	margin-top: 15px
 	+clr
+	&__buttons
+		+clr
+	&__yes,
+	&__no
+		margin-top: 25px
+		border-radius: 22px
+		background-color: #cbb08f
+		border: 2px solid #000
+		-webkit-box-shadow: 0 0 0 6px #fff
+		box-shadow: 0 0 0 6px #fff
+		font-size: 40px
+		+ps
+		+tr(.3s)
+		&:hover
+			background-color: lighten(#cbb08f, 10%)
+	&__yes
+		width: 190px
+		float: left
+		margin-left: 25px
+	&__no
+		width: 510px
+		float: right
+		margin-right: 25px
 	input
 		width: calc(770px - 210px)
 		float: left
@@ -100,6 +180,47 @@ body
 		box-shadow: 0 0 0 6px #fff
 		font-size: 40px
 		+ps
+		+tr(.3s)
+		&:hover
+			background-color: lighten(#cbb08f, 10%)
+
+.btn__center
+	width: 180px
+	margin-top: 40px
+	height: 58px
+	border-radius: 22px
+	background-color: #cbb08f
+	border: 2px solid #000
+	-webkit-box-shadow: 0 0 0 6px #fff
+	box-shadow: 0 0 0 6px #fff
+	text-align: center
+	font-size: 40px
+	line-height: 58px
+	font-weight: 600
+	+ps
+	+tr(.3s)
+	&:hover
+		background-color: lighten(#cbb08f, 10%)
+
+.footer__btn
+	position: absolute
+	bottom: 210px
+	right: 50px
+	width: 190px
+	height: 58px
+	border-radius: 22px
+	background-color: #cbb08f
+	border: 2px solid #000
+	-webkit-box-shadow: 0 0 0 6px #fff
+	box-shadow: 0 0 0 6px #fff
+	text-align: center
+	font-size: 40px
+	line-height: 58px
+	+ps
+	+tr(.3s)
+	&:hover
+		background-color: lighten(#cbb08f, 10%)
+
 
 // footer
 .footer
@@ -116,3 +237,4 @@ body
 	font-size: 40px
 	line-height: 1.2
 	+ps
+
